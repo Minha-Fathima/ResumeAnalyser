@@ -17,8 +17,8 @@ ai21.api_key = api_key
 # print(response)
 
 
-def grammarCheck(text):
-    response = ai21.GEC.execute(text)
+def grammarCheck(texts):
+    response = ai21.GEC.execute(text=texts)
     return response.corrections
 
 
