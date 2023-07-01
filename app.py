@@ -13,7 +13,7 @@ def home():
 
 
 @app.route("/", methods=["POST"])
-def upload_file():
+def uploadFile():
     file = request.files["file"]
     if file and file.filename.endswith(".pdf"):
         text = pdfToText(file)
@@ -25,4 +25,4 @@ def upload_file():
 
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000)
+    app.run(host="0.0.0.0", port=5000)
