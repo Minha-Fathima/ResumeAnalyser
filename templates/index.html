@@ -22,10 +22,10 @@
   <ul>
     {% for error in grammar_errors %}
     <li>
-      Suggestion: {{ error.suggestion }}<br>
-      startIndex: {{ error.startIndex }}<br>
-      originalText: {{ error.originalText }}<br>
-      correctionType: {{ error.correctionType }}
+      Error: {{ error.correctionType }}<br>
+      Correction: {{ error.suggestion }}<br>
+      Incorrect Text: {{ error.originalText }}<br>
+      Line number: {{ line }}
     </li>
     {% endfor %}
   </ul>
