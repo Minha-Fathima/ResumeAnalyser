@@ -1,13 +1,10 @@
 import PyPDF2
 
 
-def pdfToText(file_path):
-    #     # We use 'rb' instead of just 'r' when opening a file because PDF files, and some other file formats, are binary files
-    f = open(file_path, "rb")
+def pdfToText(file):
     text = ""
-    reader = PyPDF2.PdfFileReader(f)
+    reader = PyPDF2.PdfReader(file)
 
-    for noOfPage in range(reader.numPages):
-        page = reader.getPage(noOfPage)
+    for page in reader.pages:
         text += page.extract_text()
     return text
