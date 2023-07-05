@@ -1,3 +1,5 @@
+</html>
+
 <!DOCTYPE html>
 <html>
 
@@ -21,11 +23,12 @@
   <h2>Grammar Errors:</h2>
   <ul>
     {% for error in grammar_errors %}
+    {% set i = loop.index0 %}
     <li>
       Error: {{ error.correctionType }}<br>
       Correction: {{ error.suggestion }}<br>
       Incorrect Text: {{ error.originalText }}<br>
-      Line number: {{ line }}
+      Line number: {{ line[i] }}
     </li>
     {% endfor %}
   </ul>
