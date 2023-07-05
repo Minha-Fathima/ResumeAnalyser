@@ -57,9 +57,9 @@ def upload_file():
     if file and file.filename.endswith(".pdf"):
         text = pdfToText(file)
         grammar_errors = grammarCheck(text)
-        error_lines = getLineNo(text, grammar_errors)
+        line = getLineNo(text, grammar_errors)
         return render_template(
-            "index.html", text=text, grammar_errors=grammar_errors, error_lines=error_lines
+            "index.html", text=text, grammar_errors=grammar_errors, line=line
         )
     else:
         return render_template("index.html")
