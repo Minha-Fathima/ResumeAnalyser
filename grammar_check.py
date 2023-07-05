@@ -22,5 +22,15 @@ def grammarCheck(texts):
     return response.corrections
 
 
-def getLineNo(text):
+def getLineNo(text,errors):
     lines = text.split("\n")
+    errorLines = []    
+
+    for error in errors:
+        size = 0
+        for i, line in enumerate(lines):
+            if error['startIndex'] < (size + len(line)):
+                errorLines.append(i+1)
+                break
+            size += len(line) + 1
+    return errorLines
