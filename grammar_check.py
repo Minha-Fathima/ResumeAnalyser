@@ -1,5 +1,6 @@
 import ai21
 import os
+import warnings
 
 from dotenv import load_dotenv
 from pdf_to_text import pdfToText
@@ -17,9 +18,21 @@ ai21.api_key = api_key
 # print(response)
 
 
-def grammarCheck(texts):
-    response = ai21.GEC.execute(text=texts)
-    return response.corrections
+# def grammarCheck(texts):
+#     response = ai21.GEC.execute(text=texts)
+#     return response.corrections
+
+def grammarCheck(text):
+    ai21.api_key = api_key
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        chunk_size = 500  # Set the desired chunk size
+        chunks = [text[i : i + chunk_size] for i in range(0, len(text), chunk_size)]
+        corrections = []
+        for chunk in chunks:
+            response = ai21.GEC.execute(text=chunk)
+            corrections.extend(response.corrections)
+    return corrections
 
 
 def getLineNo(text,errors):
