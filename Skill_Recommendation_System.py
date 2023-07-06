@@ -72,6 +72,6 @@ def skillRecommendation(jobTitle, skills):
 
 
 # test case
-# jobTitle = "Data Science Intern"
-# skills = "Python, PowerBI, SQL"
-# skillRecommendation(jobTitle, skills)
+jobTitle = "Data Analyst Intern"
+skills = "Python, PowerBI, SQL"
+skillRecommendation(jobTitle, skills)
