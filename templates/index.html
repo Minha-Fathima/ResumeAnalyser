@@ -33,6 +33,28 @@
     {% endfor %}
   </ul>
   {% endif %}
+
+  {% if skillRec %}
+  <h2>Recommended Skills:</h2>
+  <ul>
+    {% for skill in skillRec %}
+    <li>{{ skill }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+  {% if certificateRec %}
+  <h2>Recommended Certifications:</h2>
+  <ul>
+    {% for certificate in certificateRec %}
+    <li>{{ certificate }}</li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+
+</body>
+
+</html>
 </body>
 
 </html>
