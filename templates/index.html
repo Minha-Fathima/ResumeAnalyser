@@ -1,69 +1,10 @@
-<!-- <!-- </html>
+
 
 <!DOCTYPE html>
 <html>
 
 <head>
-  <title>PDF Text Extractor and Grammar Checker</title>
-</head>
-
-<body>
-  <h1>PDF Text Extractor and Grammar Checker</h1>
-  <form action="/" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" accept=".pdf">
-    <input type="submit" value="Upload">
-  </form>
-
-  {% if text %}
-  <h2>Extracted Text:</h2>
-  <pre>{{ text }}</pre>
-  {% endif %}
-
-  {% if grammar_errors %}
-  <h2>Grammar Errors:</h2>
-  <ul>
-    {% for error in grammar_errors %}
-    {% set i = loop.index0 %}
-    <li>
-      Error: {{ error.correctionType }}<br>
-      Correction: {{ error.suggestion }}<br>
-      Incorrect Text: {{ error.originalText }}<br>
-      Line number: {{ line[i] }}
-    </li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-
-  {% if skillRec %}
-  <h2>Recommended Skills:</h2>
-  <ul>
-    {% for skill in skillRec %}
-    <li>{{ skill }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-
-  {% if certificateRec %}
-  <h2>Recommended Certifications:</h2>
-  <ul>
-    {% for certificate in certificateRec %}
-    <li>{{ certificate }}</li>
-    {% endfor %}
-  </ul>
-  {% endif %}
-
-</body>
-
-</html>
-</body> -->
-
-</html> -->
-
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Resume Analyser</title>
+  <title>Re-Check:Resume Analyser</title>
   <style>
     body {
       font-family: Arial, sans-serif;
