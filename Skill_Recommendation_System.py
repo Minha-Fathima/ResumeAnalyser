@@ -70,7 +70,8 @@ def skillRecommendation(jobTitle, skills):
     print(output_text)
     return output_text
 
-# test case:
-jobTitle = "Data Science Intern"
-skills = "Python, PowerBI, SQL"
-skillRecommendation(jobTitle, skills)
+
+# test case
+# jobTitle = "Data Science Intern"
+# skills = "Python, PowerBI, SQL"
+# skillRecommendation(jobTitle, skills)
