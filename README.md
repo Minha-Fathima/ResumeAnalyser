@@ -1,6 +1,4 @@
 # Re-Check: Resume Analyser
-
-# Description
 Re-Check scans resumes and provides personalized recommendations for skills and certification. 
 Moreover, It fixes grammatical errors to enhance your resume even further!
 
