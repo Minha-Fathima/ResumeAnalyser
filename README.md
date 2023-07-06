@@ -1,8 +1,8 @@
 # Re-Check: Resume Analyser
-Scan you resume and receive personalized recommendations for skills and certification. Moreover, fix you grammatical issues to enhance your resume even further!
 
-# How to run
-1. Create a .env in the given format inside botcore/
+# Description
+Re-Check scans resumes and provides personalized recommendations for skills and certification. 
+Moreover, It fixes grammatical errors to enhance your resume even further!
 
 ```
 AI21=ai_key
