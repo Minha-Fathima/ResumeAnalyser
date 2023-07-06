@@ -17,7 +17,6 @@ ai21.api_key = api_key
 
 def certificateRecommendation(jobTitle):
     prompt = f"Job Title: {jobTitle}\nCertification:"
-    print(prompt)
 
     url = (
         "https://api.ai21.com/studio/v1/j2-mid/Certificate_Recommendation_Sys/complete"
@@ -72,6 +71,7 @@ def certificateRecommendation(jobTitle):
     print(output_text)
     return output_text
 
-# test case
-jobTitle = "Data Science"
-certificateRecommendation(jobTitle)
+
+# test case:
+# jobTitle = "Data Science"
+# certificateRecommendation(jobTitle)
